@@ -29,7 +29,11 @@ def Escolhercaminho():
         SalaAtual += 2
     else:
         print("Erro nao existe esse caminho")
-  
+    
+    if (SalaAtual == 8):
+      print("Voce caiu em um portal portanto vc vai retornar para uma sala aleatoria")
+      SalaAtual = random.randint(1, 5)
+      print("Voce retornou para a sala {}".format(SalaAtual))
 
 while (salaAtual < 9 and not(perdeu)):
   Escolhercaminho()
